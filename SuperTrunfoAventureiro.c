@@ -51,44 +51,32 @@ int main() {
 
     // Cálculos
     double densidade = populacao / area;
-    double pibPerCapita = pib * 1000000000 / populacao;  // PIB em bilhões de reais
+    double pibPerCapita = pib  / populacao;
     double densidade2 = populacao2 / area2;
-    double pibPerCapita2 = pib2 * 1000000000 / populacao2;  // PIB em bilhões de reais
+    double pibPerCapita2 = pib2 / populacao2;  // PIB em bilhões de reais
 
-    // Cálculo do Super Poder
-    float superPoder = (float)(populacao + area + pib + qtdePontoTuristico + pibPerCapita + (1 / densidade));
-    float superPoder2 = (float)(populacao2 + area2 + pib2 + qtdePontoTuristico2 + pibPerCapita2 + (1 / densidade2));
+    // Exibindo as cartas com a saída formatada
+    printf("\nCarta 1:\n");
+    printf("Estado: %c\n", estado);
+    printf("Código: %s\n", codigoCarta);
+    printf("Nome da Cidade: %s\n", nomeCidade);
+    printf("População: %lu\n", populacao);
+    printf("Área: %.2lf km²\n", area);
+    printf("PIB: %.2lf bilhões de reais\n", pib);
+    printf("Número de Pontos Turísticos: %d\n", qtdePontoTuristico);
+    printf("Densidade Populacional: %.2lf hab/km²\n", densidade);
+    printf("PIB per Capita: %.2lf reais\n", pibPerCapita);
 
-    // Comparações usando operador ternário
-    printf("\nComparação de Cartas:\n");
-
-    // Comparando populações
-    printf("\nPopulação: ");
-    printf((populacao > populacao2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
-
-    // Comparando áreas
-    printf("\nÁrea: ");
-    printf((area > area2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
-
-    // Comparando PIBs
-    printf("\nPIB: ");
-    printf((pib > pib2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
-
-    // Comparando pontos turísticos
-    printf("\nPontos Turísticos: ");
-    printf((qtdePontoTuristico > qtdePontoTuristico2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
-
-    // Comparando densidades populacionais
-    printf("\nDensidade Populacional: ");
-    printf((densidade < densidade2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");  // Menor densidade vence
-
-    // Comparando PIB per capita
-    printf("\nPIB per Capita: ");
-    printf((pibPerCapita > pibPerCapita2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
-
-    // Comparando super poder
-    printf("\nSuper Poder: ");
-    printf((superPoder > superPoder2) ? "Carta 1 venceu\n" : "Carta 2 venceu\n");
+    printf("\nCarta 2:\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigoCarta2);
+    printf("Nome da Cidade: %s\n", nomeCidade2);
+    printf("População: %lu\n", populacao2);
+    printf("Área: %.2lf km²\n", area2);
+    printf("PIB: %.2lf bilhões de reais\n", pib2);
+    printf("Número de Pontos Turísticos: %d\n", qtdePontoTuristico2);
+    printf("Densidade Populacional: %.2lf hab/km²\n", densidade2);
+    printf("PIB per Capita: %.2lf reais\n", pibPerCapita2);
 
     return 0;
 }
