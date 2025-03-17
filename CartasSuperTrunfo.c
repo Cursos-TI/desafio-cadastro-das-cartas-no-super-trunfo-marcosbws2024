@@ -51,9 +51,9 @@ int main() {
 
     // Cálculos
     double densidade = populacao / area;
-    double pibPerCapita = pib * 1000000000 / populacao;  // PIB em bilhões de reais
+    double pibPerCapita = pib  / populacao;  // PIB em bilhões de reais
     double densidade2 = populacao2 / area2;
-    double pibPerCapita2 = pib2 * 1000000000 / populacao2;  // PIB em bilhões de reais
+    double pibPerCapita2 = pib2 / populacao2;  // PIB em bilhões de reais
 
     // Cálculo do Super Poder
     float superPoder = (float)(populacao + area + pib + qtdePontoTuristico + pibPerCapita + (1 / densidade));
